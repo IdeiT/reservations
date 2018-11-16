@@ -1,0 +1,326 @@
+/** Form */
+
+// ---
+// Formulario de rexistro
+
+.form-registration {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    @extend .inputbox;
+  }
+}
+
+.inputbox {
+  @extend .form-control;
+
+  border: 1px solid #b1b1b1;
+}
+
+.inputbox-extra {
+  line-height: 2rem;
+  font-size: 0.875rem;
+  color: $gray-700;
+}
+
+.label-spacer {
+  @extend .h3;
+
+  padding-top: 20px;
+}
+
+.control-group {
+  @extend .form-group;
+
+  margin-bottom: 1.25rem;
+
+  .controls {
+    &.has-extra-label {
+      display: flex;
+      align-items: center;
+
+      span {
+        padding: 0 10px;
+      }
+    }
+
+    &.input-hour {
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 70px;
+      }
+
+      span {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.js-calendar {
+  .btn {
+    min-width: 10px;
+    font-size: 0.875rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+.field-calendar {
+  .input-append {
+    display: flex;
+
+    .inputbox {
+      width: auto;
+
+      & + .btn {
+        min-width: 10px;
+        padding: 5px 15px;
+
+        .icon-calendar {
+          &::before {
+            @include eleganticon;
+
+            font-size: 20px;
+            content: "\e023";
+          }
+        }
+      }
+    }
+
+    & > input[type="text"] {
+      @extend .form-control;
+
+      border: 1px solid #b1b1b1;
+      width: auto;
+
+      & + .btn {
+        min-width: 10px;
+        padding: 5px 15px;
+
+        .icon-calendar {
+          &::before {
+            @include eleganticon;
+
+            font-size: 20px;
+            content: "\e023";
+          }
+        }
+      }
+    }
+  }
+}
+
+.humminngbird-scheduler,
+.hummingbird-calendar {
+  margin-bottom: 40px;
+
+  .prevButton {
+    position: relative;
+
+    &::before {
+      display: none;
+    }
+
+    .icon-backward {
+      &::before {
+        @include eleganticon;
+
+        font-size: 16px;
+        content: "4";
+        color: #fff;
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        margin-top: -9px;
+      }
+    }
+  }
+
+  .nextButton {
+    position: relative;
+    text-align: right;
+
+    &::before {
+      display: none;
+    }
+
+    .icon-forward {
+      &::before {
+        @include eleganticon;
+
+        font-size: 16px;
+        content: "5";
+        color: #fff;
+        position: absolute;
+        right: 3px;
+        top: 50%;
+        margin-top: -9px;
+      }
+    }
+  }
+
+  .navigationPanel {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .svgPanel {
+    svg {
+      width: 100%;
+      font-size: 10px;
+    }
+  }
+}
+
+/* Bug for Tooltips with Bootstrap and Mootools */
+.hasPopover,
+.hasTooltip {
+  display: inline-block !important;
+}
+
+.dateRepeaterContainer {
+  border: 1px solid #ccc;
+  padding: 20px;
+
+  .control-label {
+    width: 200px;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  .control-group {
+    margin-bottom: 15px;
+  }
+
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+
+  .dateRepeater-end {
+    .input-mini {
+      @extend .form-control;
+
+      border: 1px solid #b1b1b1;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .weekdays {
+    .controls {
+      display: flex;
+
+      .miniday {
+        margin-right: 15px;
+
+        input {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.dateRepeater {
+  margin-bottom: 40px;
+  text-align: right;
+
+  .processButton {
+    position: relative;
+    padding-left: 45px;
+
+    &::before {
+      content: "\e037";
+      font-size: 22px;
+    }
+
+    .icon-gears {
+      display: none;
+    }
+  }
+
+  .calendarContainer {
+    text-align: center;
+    font-size: 14px;
+    margin: 35px 0 20px 0;
+  }
+}
+
+// ------
+// Selector
+
+.chzn-container {
+  font-size: 14px;
+  min-width: 70px;
+
+  .chzn-results {
+    li {
+      padding: 8px;
+    }
+  }
+}
+
+.chzn-container-active {
+  .chzn-single {
+    background-image: none;
+  }
+}
+
+.chzn-container-single {
+  .chzn-single {
+    border-radius: 0;
+    border: 1px solid #b1b1b1;
+    height: calc(2.75rem + 2px);
+    line-height: calc(2.75rem + 2px);
+    padding-left: 1rem;
+    background-image: none;
+    box-shadow: none;
+    color: $primary;
+
+    div {
+      width: 34px;
+
+      b {
+        background-image: none;
+
+        &::before {
+          @include eleganticon;
+
+          content: "3";
+          font-size: 28px;
+          position: absolute;
+          top: 50%;
+          margin-top: -14px;
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .chzn-drop {
+    border-radius: 0;
+  }
+
+  &.chzn-container-active {
+    div {
+      b {
+        &::before {
+          content: "2";
+        }
+      }
+    }
+  }
+}
+
+.requestElement {
+  .control-value {
+    display: inline-block;
+  }
+}

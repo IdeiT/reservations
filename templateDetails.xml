@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="3" type="template" client="site" method="upgrade">
+
+	<name>frontend</name>
+	<creationDate>xxxx-xx-xx</creationDate>
+	<author>Your Name</author>
+	<copyright>Copyright © xxxx example.com</copyright>
+	<authorEmail>your.name@example.com</authorEmail>
+	<authorUrl>http://www.example.com</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<h1>frontend</h1>
+		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
+	]]></description>
+
+	<files>
+		<folder>dist</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+   	<filename>index.php</filename>
+		<filename>logic.php</filename>
+		<filename>offline.php</filename>
+    <filename>package.json</filename>
+		<filename>README.md</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>debug</position>
+		<position>breadcrumb</position>
+		<position>header</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>user3</position>
+		<position>user4</position>
+		<position>footer</position>
+	</positions>
+
+</extension>

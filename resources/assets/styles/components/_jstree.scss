@@ -1,0 +1,46 @@
+
+.jstree-default {
+  .jstree-anchor {
+    line-height: 28px;
+    height: 28px;
+    font-weight: 300;
+  }
+
+  .jstree-leaf {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .jstree-anchor {
+      line-height: 32px;
+      height: 32px;
+    }
+
+    .jstree-icon {
+      margin-top: 4px;
+      float: left;
+      margin-right: 10px;
+    }
+
+    &.jstree-last {
+      .jstree-icon {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .jstree-clicked {
+    background: transparent;
+    box-shadow: none;
+    font-weight: 400;
+  }
+
+  .jstree-open {
+    & > .jstree-anchor {
+      font-weight: 400;
+    }
+  }
+
+  .jstree-themeicon-custom {
+    background-size: cover !important;
+  }
+}
